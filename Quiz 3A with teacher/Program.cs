@@ -14,11 +14,22 @@ namespace Quiz_3A_with_teacher
             int number = 0;
             //decalre sum varibale
             int sum = 0;
-            //prints promt asking user to input a number
-            Console.WriteLine(" input a number ");
-            //collects and convert user input
-            number = Convert.ToInt32(Console.ReadLine());
-
+           
+            while (number == 0)
+            {
+                //cathces user input to make sure its vaild
+                try
+                {
+                    //prints promt asking user to input a number
+                    Console.WriteLine(" input a number ");
+                    //collects and convert user input
+                    number = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("the input is invalid");
+                }
+            }
             //users loop to find all odd numbers in user input
           //  for(int i =0;i<number; i++)
           //  {
